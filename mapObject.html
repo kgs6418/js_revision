@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myMap=new Map()
+        myMap.set('+91','india')
+        myMap.set('+92','pakistan')
+        console.log(myMap)
+        // can we loop here??
+        for (const code of myMap) {
+            console.log(code)
+        }
+        for (const [key,value] of myMap) {
+            console.log(key,',',value)
+        }
+    </script>
+</body>
+</html>

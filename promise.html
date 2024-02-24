@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let promise= new Promise(function(resolve,reject){
+        //     setTimeout(function(){
+        //         console.log("async task is complete")
+        //         resolve()
+        //     },2000)
+        // })
+        // promise.then(function () {
+        //     console.log("promise being consumed")
+        // })
+
+
+        //question:- How do we pass the value from resolve to then?
+
+        let promise=new Promise(function (resolve,reject) {
+            setTimeout(function () {
+                let error=true;
+                if(!error){
+                    resolve({name:'gaurav',id:"123"})
+                }else{
+                    reject("something went wrong")
+                }
+                
+            },2000)
+        })
+        promise
+        .then(function(username) {
+            console.log(username)
+            return username.id
+        })
+        .then(function (myId) {
+            console.log(myId)
+        })
+        .catch(function (err) {
+            console.log("kuch galat hai bhai")
+        })
+        .finally(function(){
+            console.log("Finally your promise is resolved or rejected ")
+        })
+
+
+    </script>
+</body>
+</html>

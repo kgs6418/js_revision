@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="middle">
+        <div id="inner">
+          <button id="btn1" style="background-color: red">Button-1</button><br><br>
+          <a href="https://google.com/" id="google_link">Google.com</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // let btn1 = document.getElementById("btn1");
+      // btn1.addEventListener("click", function red(e) {
+      //   console.log("i am red");
+      //   e.stopPropagation()
+      // },false);
+      // document.querySelector('#middle').addEventListener('click',function (e) {
+      //   console.log("i am middle")
+      //   // e.stopPropagation()
+      // },false)
+      // document.querySelector('#outer').addEventListener('click',function () {
+      //   console.log("i am outer")
+      // },false)
+      document.getElementById('google_link').addEventListener('click',function(e){
+       
+         e.preventDefault()
+         console.log(e)
+      })
+
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //username='sam' is a default value that means is that if we do not pass the argument then the code will take this value.
+      function user(username = "sam") {
+        return `${username}, has just logged in`;
+      }
+
+      let id = user("gaurav");
+      console.log(id);
+    </script>
+  </body>
+</html>

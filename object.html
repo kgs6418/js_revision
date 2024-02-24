@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sym=Symbol()
+        let obj={
+            a:1,
+            b:2,
+            c:3,
+            [sym]:"gaurav",
+            fun:function(){
+                
+                return "anant"
+            }
+        }
+        // console.log(obj[sym])
+        // console.log(obj.fun());
+        // how do you access them??
+        //1st way.
+        // console.log(obj.a)
+
+        // 2nd way
+        // console.log(obj["a"])
+
+        // obj.a=33
+        // console.log(obj)
+        let obj2={
+            d:4,
+            e:5
+        }
+
+        // merge two object:-
+
+        // let obj3=Object.assign({},obj,obj2)
+        // console.log(obj3)
+
+        // 2nd way to merge object:-
+        let obj3={...obj,...obj2}
+        console.log("obj3-->",obj3)
+
+        console.log(Object.keys(obj3))
+        
+        console.log(Object.values(obj3))
+        console.log(Object.entries(obj3))
+        console.log(obj3.hasOwnProperty('c'))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function student(name,roll,school) {
+            this.name=name
+            this.roll=roll
+            this.school=school
+            this.sayHello=function(){
+                console.log(`Hello,I am ${this.name} and my Roll.no- ${this.roll} and my school name is ${this.school}`)
+            }
+            
+        }
+       let s1= new student("gaurav",1,"DBA")
+       console.log(s1)
+       s1.sayHello()
+
+       let s2= new student("anant",2,"DBA")
+       console.log(s2)
+       s2.sayHello()
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let student={
+        //     name:"gaurav"
+        // }
+        // let teacher={
+        //     work:"teach student"
+        // }
+        // let teachingSupport={
+        //     isAvailable:false
+        // }
+        // let TA_support={
+        //     make_assignment:"js Assignment"
+        // }
+
+        // //question:- How can you access the property of student inside the TA_support?
+        // //ans-->link nis prototype.
+
+         
+        // Object.setPrototypeOf(teacher,student)
+        // console.log(teacher.name);
+
+        // question:--> make custom method of finding the length of a string?
+        //answer:- we will define a function in the string prototype itself so that it can be used as a method outside.
+
+        let name="gaurav     "
+        console.log(name.length)
+        String.prototype.trueLength=function(){
+           console.log(`The true Length is:${this.trim().length}`) 
+        }
+        name.trueLength()
+        
+       
+    </script>
+</body>
+</html>

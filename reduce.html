@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr=[1,2,3,4,5]
+        // let total=arr.reduce((accumulator,current)=>accumulator+current,0)
+        // console.log(total)
+
+        //just to check what accumulator takes every time.
+        let arr=[1,2,3,4,5]
+        let total=arr.reduce((accumulator,current)=>{
+            console.log(`accumulator:${accumulator} and current:${current}`)
+            return accumulator+current
+        },0)
+        console.log(total)
+    </script>
+</body>
+</html>

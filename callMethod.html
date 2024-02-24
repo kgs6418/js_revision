@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function createUser(username) {
+      //     this.username=username
+      // }
+      // function setUser(username,id,password) {
+      //     createUser.call(this,username)
+      //     this.id=id
+      //     this.password=password
+      // }
+      // let user1=new setUser("gaurav",11,"123singh")
+      // console.log(user1)
+
+      //another eg. from chat gpt
+
+      function greet(message) {
+        
+        console.log(message + ", " + this.name);
+        
+      }
+      var person = {
+        name: "John",
+      };
+
+      // Using call() to invoke the greet function with person as the 'this' value
+      greet.call(person, "Hello");
+
+      // Output: Hello, John
+    </script>
+  </body>
+</html>

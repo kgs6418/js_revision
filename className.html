@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Good Morning</p>
+    <ul>
+        <li class="test">one</li>
+        <li class="test">three</li>
+        <li class="test">four</li>
+        <li class="test">five</li>
+    </ul>
+    
+    <script>
+        
+        let test=document.getElementsByClassName("test")
+        document.write(test)
+        console.log(test)
+    //     let arr=Array.from(test)
+    //     console.log(arr)
+
+    let heading=document.createElement('h1')
+    heading.innerHTML="This is Heading"
+    document.body.appendChild(heading)
+    
+    let div=document.createElement('div')
+    div.className="fruits"
+    div.setAttribute('title','freshFruit')
+    div.innerHTML="apple"
+    div.style.background="red"
+    document.body.appendChild(div)
+
+    
+     </script>
+</body>
+</html>

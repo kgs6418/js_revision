@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let promise = new Promise(function (resolve, reject) {
+      //   setTimeout(function () {
+      //     let error = false;
+      //     if (!error) {
+      //       resolve({ name: "gaurav", id: "123" });
+      //     } else {
+      //       reject("something went wrong");
+      //     }
+      //   }, 2000);
+      // });
+      // async function nextPromise() {
+      //   try {
+      //     let res = await promise;
+      //     console.log(res.name);
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // }
+      // nextPromise()
+
+      // using fetch():- and async and await
+
+      // async function getAllUser() {
+      //     try {
+      //         let response=await fetch('https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json')
+      //    let data=await response.json()
+      //    console.log(data)
+      //     } catch (error) {
+      //         console.log(error)
+      //     }
+
+      // }
+      // getAllUser()
+
+      //using the same with .then and .catch
+
+      // function getAllUser() {
+      //     fetch('https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json')
+      //     .then(function(data){
+      //         return data.json()
+
+      //     }).then(function(data){
+      //         console.log(data)
+      //     })
+      //     .catch(function (err) {
+      //         console.log(err);
+      //     })
+      // }
+      // getAllUser()
+
+      //new:-
+
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function fetchData() {
+        try {
+          await delay(2000);
+
+          let error = true;
+          if (!error) {
+            const username = { name: "gaurav", id: "123" };
+            console.log(username);
+            const myId = username.id;
+            console.log(myId);
+            return myId;
+          } else {
+            throw new Error("something went wrong");
+          }
+        } catch (error) {
+          console.log("kuch galat hai bhai");
+          throw error; // Re-throw the error if needed
+        } finally {
+          console.log("Finally your promise is resolved or rejected ");
+        }
+      }
+
+      async function main() {
+        try {
+          const result = await fetchData();
+          // Do something with the result if needed
+        } catch (error) {
+          // Handle any errors from fetchData or subsequent processing
+          console.error(error);
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function rest(...num){
+            let sum=num.reduce((acc,current)=>acc+current,0)
+            return sum
+        }
+        console.log(rest(200,300,400,500))
+    </script> -->
+
+
+    <!-- how to use object in function. -->
+    <!-- <script>
+        let obj={
+            firstname:"kumar",
+            middlename:"gaurav",
+            lastname:"singh"
+        }
+        function test(myname) {
+            return myname.firstname+" "+myname.middlename+" "+myname.last
+        }
+        console.log(test(obj))
+    </script> -->
+    <!-- <script>
+        let arr=[1,2,3,4,5]
+         function test(array) {
+            return array[0]
+            
+        }
+        console.log(test(arr))
+    </script> -->
+
+    <!-- Question: why we do not use 'var variable ' now?? -->
+    <!-- <script>
+        if(true){
+            let a=1;
+            const b=2;
+            var c =3;
+        }
+        // console.log(a)
+        // console.log(b)
+        console.log(c) // here c is accessible outside the scope that's the problem.
+    </script> -->
+
+    <!-- # variables declared inside the scope ,will only be used inside the scope and not outside.
+    <script>
+        let a=200;
+        if(true){
+            let b =300;
+            let c =300;
+            console.log(a+b)
+        } -->
+        <!-- // console.log(a)
+        // console.log(b) -->
+
+        or
+
+        <script>
+            function parent() {
+                let first_name="gaurav"
+
+                function child() {
+                    let last_name="singh"
+                    return last_name
+                }
+                console.log(first_name)
+                console.log(child())
+            }
+            parent()
+        </script>
+        
+    </script> 
+   
+
+</body>
+</html>

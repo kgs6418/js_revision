@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML Example</title>
+</head>
+<body>
+  <div id="myDiv"><p>Hello, <strong>World</strong>!</p></div>
+
+  <script>
+    var divElement = document.getElementById("myDiv");
+    // innerHTML:-
+    var htmlContent = divElement.innerHTML;
+    console.log(htmlContent); 
+    // innerText :-
+    var text = divElement.innerText;
+    console.log(text); 
+    // innerContent :-
+    var content=divElement.textContent;
+    console.log(content);
+
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        fetch('https://microsoftedge.github.io/Demos/json-dummy-data/64KB-min.json')
+        .then(function(data){
+            return data.json()
+        }).then(function(res_data){
+            console.log(res_data[1].name)
+        }).catch(function(err){
+            console.log(err)
+        })
+
+    </script> -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest Example</title>
+</head>
+<body>
+  <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+
+    // Set up a function that will be called when the request status changes
+    xhr.onreadystatechange = function() {
+      // Check if the request is complete
+      if (xhr.readyState === 4) {
+        // Check if the request was successful (status code 200)
+        if (xhr.status === 200) {
+          // Parse the JSON response
+          var responseData = JSON.parse(xhr.responseText);
+
+          // Log the parsed data to the console
+          console.log(responseData);
+        } else {
+          // Log an error message if the request was not successful
+          console.error('Request failed. Status: ' + xhr.status);
+        }
+      }
+    };
+
+    // Send the request
+    xhr.send();
+  </script>
+</body>
+</html>
+
+
+</body>
+</html>
